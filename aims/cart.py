@@ -41,5 +41,3 @@ class Cart:
         return round(self.total_cost() * (100 - percent) / 100, 2)
 
         print("Đã thêm đĩa vào giỏ hàng")
-
-        print(f"The disc '{dvd.title}' has been added")
