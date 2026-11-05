@@ -39,3 +39,5 @@ class Cart:
         if percent < 0 or percent > 100:
             raise ValueError("Percent must be between 0 and 100")
         return round(self.total_cost() * (100 - percent) / 100, 2)
+
+        print("Đã thêm đĩa vào giỏ hàng")
