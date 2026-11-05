@@ -41,3 +41,9 @@ class Cart:
         return round(self.total_cost() * (100 - percent) / 100, 2)
 
         print("Đã thêm đĩa vào giỏ hàng")
+
+    def sort_by_title(self):
+        self.lsDVD.sort(key=lambda x: x.title)
+
+    def sort_by_cost(self):
+        self.lsDVD.sort(key=lambda x: x.cost, reverse=True)
