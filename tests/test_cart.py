@@ -26,3 +26,14 @@ class TestCart(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+    def test_sort_cart(self):
+        cart = Cart()
+        d1 = DigitalVideoDisc("Zorro", cost=10.0)
+        d2 = DigitalVideoDisc("Alpha", cost=30.0)
+        cart.add_dvd(d1)
+        cart.add_dvd(d2)
+        cart.sort_by_title()
+        self.assertEqual(cart.lsDVD[0].title, "Alpha")
+        cart.sort_by_cost()
+        self.assertEqual(cart.lsDVD[0].cost, 30.0)
